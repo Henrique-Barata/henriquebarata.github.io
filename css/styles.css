@@ -12,6 +12,18 @@ body {
     color: #333;
     background-color: #f4f4f4;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%; /* Half the page */
 }
 
 /* Header Styling */
@@ -46,12 +58,17 @@ section {
 }
 
 /* Project Section Styling */
+#projects {
+    width: 100%;
+}
+
 #projects .project {
     margin-bottom: 20px;
 }
 .project h3 {
     font-size: 1.5em;
     color: #007acc;
+    margin-top: 0;
 }
 .project p {
     margin: 10px 0;
