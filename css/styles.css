@@ -20,6 +20,7 @@ body {
     margin: 0;
 }
 
+
 /* Container Styling */
 .container {
     display: flex;
@@ -54,6 +55,7 @@ header nav a:hover {
 section {
     margin: 20px 0;
     padding: 20px;
+    width: 50%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
