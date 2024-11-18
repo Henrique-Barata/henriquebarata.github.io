@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dunks1980</title>
   <meta name="description" content="Home of Dunks1980 projects.">
-  <link rel="icon" href="./favicon.ico">
-  <link rel="preload" href="./fonts/Montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf"
+  <link rel="icon" href="favicon.ico">
+  <link rel="preload" href="fonts/Montserrat/Montserrat-Regular.ttf" as="font" type="font/ttf"
     crossorigin="anonymous">
 
   <!-- preload hero image -->
-  <link rel="preload" href="./images/hero_setup.avif" as="image" type="image/avif">
-  <link rel="preload" href="./images/hero_setup.webp" as="image" type="image/webp">
-  <link rel="preload" href="./images/hero_setup.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="https://dunks1980.com/images/hero_setup.avif" as="image" type="image/avif">
+  <link rel="preload" href="https://dunks1980.com/images/hero_setup.webp" as="image" type="image/webp">
+  <link rel="preload" href="images/hero_setup.jpg" as="image" type="image/jpeg">
 
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -22,7 +22,7 @@
   <style>
     @font-face {
       font-family: 'Montserrat-Regular';
-      src: url('./fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+      src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
       font-display: swap;
     }
 
@@ -435,7 +435,7 @@
               <picture>
                 <source srcset="./images/hero_setup.avif" type="image/avif">
                 <source srcset="./images/hero_setup.webp" type="image/webp">
-                <img width="500" height="500" src="./images/hero_setup.jpg" alt="hero image">
+                <img width="500" height="500" src="images/hero_setup.jpg" alt="hero image">
               </picture>
             </div>
           </div>
@@ -466,7 +466,7 @@
             </div>
             <div class="project-buttons">
               <div class="project-button" bay-for="project.buttons" params="button">
-                <a aria-label="${button.aria}" href="${button.href}" rel="noopener" target="_blank">
+                <a aria-label="${button.aria}" href="https://dunks1980.com/${button.href}" rel="noopener" target="_blank">
                   <if this="button.icon === 'WebSVG'">
                     <WebSVG></WebSVG>
                   </if>
