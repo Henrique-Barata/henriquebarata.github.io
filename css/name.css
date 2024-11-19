@@ -1,0 +1,100 @@
+
+  .key {
+    font-size: 5vw;
+    display: inline-block;
+    letter-spacing: -0.5vw;
+    transition: transform 0.3s;
+    
+  }
+  
+  
+  @keyframes pressDown1 {
+    30%,
+    40%,
+    100% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(10px);
+    }
+  }
+  
+
+
+
+.key:nth-child(1) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 0s;
+}
+
+.key:nth-child(2) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 0.2s;
+}
+
+.key:nth-child(3) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 0.4s;
+}
+
+.key:nth-child(4) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 0.6s;
+}
+
+.key:nth-child(5) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 0.8s;
+}
+
+.key:nth-child(6) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 1s;
+}
+
+.key:nth-child(7) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 1.2s;
+}
+
+.key:nth-child(8) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 1.4s;
+}
+
+.key:nth-child(9) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 1.6s;
+}
+
+.key:nth-child(10) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 1.8s;
+}
+
+.key:nth-child(11) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 2s;
+}
+
+.key:nth-child(12) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 2.2s;
+}
+
+.key:nth-child(13) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 2.4s;
+}
+
+.key:nth-child(14) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 2.6s;
+}
+.key:nth-child(15) {
+    animation: pressDown1 3s infinite;
+    animation-delay: 2.8s;
+}
+  
+  
+  

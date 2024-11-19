@@ -1,149 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Barata</title>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            background: url('images/metal.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <title>Henrique Barata</title>
+  <link rel="stylesheet" href="css/bubbles.css">
+  <link rel="stylesheet" href="css/stylesIndex.css">
 
-        nav {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: rgba(0, 0, 0, 0);
-            padding: 10px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #5faef8;
-        }
-
-        .content {
-            margin-top: 10px; /* Adjust this value based on the height of your nav */
-        }
-
-        section {
-            min-height: 100vh;
-            padding: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-in-out;
-        }
-
-        section:nth-child(even) {
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        section:nth-child(odd) {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-            text-align: center;
-            max-width: 800px;
-        }
-    </style>
 </head>
 <body>
-    <nav>
-        <a href="#section1">Home</a>
-        <a href="#section2">About</a>
-        <a href="#section3">Projects</a>
-        <a href="#section4">Contact</a>
-    </nav>
 
-    <div class="content">
-        <section id="section1">
-            <div>
-                <h1>Hello, I'm Henrique</h1>
-                <p>Welcome to my portfolio. Scroll down to explore more about my work and passion for development.</p>
-            </div>
-        </section>
+<body>
+    <div class="wrapper">
+      <h1>Henrique Barata</h1>
+      <h2>Software Engineer</h2>
+     <section class="icons">
+        <a href="https://github.com/Henrique-Barata" target="_blank" data-alt="GitHub Profile">
+            <img src="images/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/henrique-barata-9b2a9926b/" target="_blank" data-alt="LinkedIn Profile">
+            <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="assets/Henrique_Barata.pdf" target="_blank" data-alt="View CV">
+            <img src="images/cv.png" alt="CV">
+        </a>
 
-    
-        <section id="section2">
-            <div>
-                <h1>About Me</h1>
-                <p>I am a software developer passionate about creating web solutions that inspire and innovate. Let's build something great together!</p>
-            </div>
-        </section>
-        <section id="section3">
-            <div>
-                <h1>My Projects</h1>
-                <p>Explore my work across various domains, including web development, AI, and design. Each project represents a piece of my journey.</p>
-            </div>
-        </section>
-        <section id="section4">
-            <div>
-                <h1>Contact Me</h1>
-                <p>Got a project idea? Want to collaborate? Reach out to me, and let's create something amazing!</p>
-            </div>
-        </section>
+      </section>
+
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section');
-
-            const options = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    } else {
-                        entry.target.style.opacity = 0;
-                        entry.target.style.transform = 'translateY(50px)';
-                    }
-                });
-            }, options);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            document.querySelectorAll('nav a').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-    </script>
+  </body>
+<!-- partial -->
+  
 </body>
 </html>
