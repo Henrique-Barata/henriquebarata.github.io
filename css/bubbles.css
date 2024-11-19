@@ -157,9 +157,16 @@ div .dot {
 
 
 
-.wrapper div.clicked {
-  animation: disappear 0.5s forwards; /* Add disappearing animation */
-  /*animation: flyOff 0.5s forwards;*/
+.wrapper div.clicked.disappear {
+  animation: disappear 0.5s forwards;
+}
+
+.wrapper div.clicked.flyOff {
+  animation: flyOff 1s forwards;
+}
+
+.wrapper div.clicked.pop {
+  animation: pop 0.3s forwards;
 }
 
 @keyframes disappear {
@@ -180,6 +187,18 @@ div .dot {
   }
   100% {
       opacity: 0;
-      transform: translateX(-100vw) scale(0);
+      transform: translateY(-5vw) scale(2);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
   }
 }

@@ -1,5 +1,17 @@
-document.querySelectorAll('.wrapper div').forEach(item => {
-    item.addEventListener('click', function() {
-        this.classList.add('clicked');  // Add class 'clicked' when clicked
-    });
+// Select all div elements inside the wrapper
+const divs = document.querySelectorAll('.wrapper div');
+
+// Add click event listeners to the divs
+divs.forEach(div => {
+  div.addEventListener('click', () => {
+    // Remove previously assigned animation classes
+    div.classList.remove('disappear', 'flyOff', 'pop');
+    
+    // Randomly choose an animation
+    const animations = ['disappear', 'flyOff', 'pop'];
+    const chosenAnimation = animations[Math.floor(Math.random() * animations.length)];
+    
+    // Add the "clicked" class and the chosen animation class
+    div.classList.add('clicked', chosenAnimation);
+  });
 });
