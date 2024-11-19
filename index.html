@@ -1,102 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Barata | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-        }
-        .container {
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
-        }
-        .container.visible {
-            opacity: 1;
-        }
-        #about {
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        #about img {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-        #about p {
-            max-width: 600px;
-            margin: 1rem auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Henrique Barata</h1>
-        <p>Software Engineer | Backend Engineer | Web Developer </p>
-        <nav>
-            <a href="about/about.html">About</a>
-            <a href="projects/projects.html">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="path/to/your/photo.jpg" alt="Henrique Barata">
-        <p>I am a dedicated Software Engineer with problem-solving abilities, known for creating efficient solutions and thinking outside the box to overcome challenges.<br> My resourcefulness allows me to tackle complex issues with innovative approaches...</p>
-    </section>
-
-    <div class="container">
-        <section id="projects">
-            <h2>Experience</h2>
-            <div class="project">
-                <h3>VA|PREVENTION Web Application</h3>
-                <p>I have been a Software Engineer at VA|PREVENTION for 15 months. In this project, I worked with a team of 16 researchers from five higher education institutions, gaining experience in...</p>
-                <a href="projects/vaprevention.html">About This Project</a>
-            </div>
-            <div class="project">
-                <h3>Dream Team Web site</h3>
-                <p>I created a simple one-page website for Dream Team, a company offering private driver rental services. The page provides a streamlined overview of Dream Team’s services, highlighting...</p>
-                <a href="https://www.dreamteam-rentadriver.com" target="_blank">https://www.dreamteam-rentadriver.com</a>
-            </div>
-            <div class="more-projects">
-                <a href="projects/projects.html">Portfolio</a>
-            </div>            
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:henrique.fc.barata@gmail.com">henrique.fc.barata@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/henrique-barata-9b2a9926b/" target="_blank">https://www.linkedin.com/in/henrique-barata-9b2a9926b</a></p>
-            <p>GitHub: <a href="https://github.com/Henrique-Barata" target="_blank">https://github.com/Henrique-Barata</a></p>
-        </section>
+  <header>
+    <div class="description">
+      <p>This is a little description of the website.</p>
     </div>
-
-    <footer>
-        <p>&copy; Henrique Barata </p>
-    </footer>
-
-    <script>
-        document.addEventListener('scroll', function() {
-            const container = document.querySelector('.container');
-            if (window.scrollY > 0) {
-                container.classList.add('visible');
-            }
-        });
-    </script>
+    <div class="header-image">
+      <img src="path_to_your_image.jpg" alt="Header Image">
+    </div>
+  </header>
+  <section class="multi-box-section">
+    <div class="box">
+      <div class="box-image">
+        <img src="path_to_image1.jpg" alt="Box 1 Image" onclick="openImage(this)">
+      </div>
+      <p>Description for box 1</p>
+      <div class="box-links">
+        <a href="link1"><i class="icon1"></i></a>
+        <a href="link2"><i class="icon2"></i></a>
+        <a href="link3"><i class="icon3"></i></a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-image">
+        <img src="path_to_image2.jpg" alt="Box 2 Image" onclick="openImage(this)">
+      </div>
+      <p>Description for box 2</p>
+      <div class="box-links">
+        <a href="link1"><i class="icon1"></i></a>
+        <a href="link2"><i class="icon2"></i></a>
+        <a href="link3"><i class="icon3"></i></a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-image">
+        <img src="path_to_image3.jpg" alt="Box 3 Image" onclick="openImage(this)">
+      </div>
+      <p>Description for box 3</p>
+      <div class="box-links">
+        <a href="link1"><i class="icon1"></i></a>
+        <a href="link2"><i class="icon2"></i></a>
+        <a href="link3"><i class="icon3"></i></a>
+      </div>
+    </div>
+  </section>
+  <script src="scripts.js"></script>
 </body>
 </html>
