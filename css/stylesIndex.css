@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-display: swap;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat-Regular';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fafeff;
+    color: #0a001b;
+  }
+  
+  /* Rest of the extracted styles from the <style> tag */
