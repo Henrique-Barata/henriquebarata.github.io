@@ -1,6 +1,6 @@
 // Select all div elements inside the wrapper
 const divs = document.querySelectorAll('.wrapper div');
-
+console.log("Pop the bubbles!");
 // Add click event listeners to the divs
 divs.forEach(div => {
   div.addEventListener('click', () => {
