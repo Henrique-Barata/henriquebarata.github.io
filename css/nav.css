@@ -1,0 +1,28 @@
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+    gap: 20px; /* Adds space between the links */
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+header nav a {
+display: inline-block;
+margin: 0 15px;
+font-size: clamp(1rem, 1vw, 3rem);
+text-decoration: none;
+box-shadow: inset 0 0 0 0 #54b3d6;
+color: #132666;
+font-weight: 500;
+padding: 0 .25rem;
+transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+
+header nav a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+}
+
+  
