@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henrique Barata | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .background-image-1 {
+            background-image: url('path_to_first_image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .background-image-2 {
+            background-image: url('path_to_second_image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,17 +30,14 @@
     </header>
 
     <div class="container">
-        <section id="about" style="display: flex; align-items: center;">
+        <section id="about" class="background-image-1" style="display: flex; align-items: center;">
             <div style="flex: 1;">
                 <h2>About Me</h2>
                 <p>I am a dedicated Software Engineer with problem-solving abilities, known for creating efficient solutions and thinking outside the box to overcome challenges.<br> My resourcefulness allows me to adapt and innovate in various situations, ensuring successful project outcomes.</p>
             </div>
-            <div style="flex: 1; text-align: right;">
-                <img src="path_to_your_image.jpg" alt="Henrique Barata" style="max-width: 100%; height: auto;">
-            </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="background-image-2">
             <h2>Experience</h2>
             <div class="project">
                 <h3>VA|PREVENTION Web Application</h3>
@@ -44,6 +53,10 @@
                 <a href="projects/projects.html">Portfolio</a>
             </div>            
             <!-- Add more projects as needed -->
+        </section>
+
+        <section class="background-image-1">
+            <!-- Additional content if needed -->
         </section>
     </div>
 
