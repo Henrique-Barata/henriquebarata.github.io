@@ -1,0 +1,31 @@
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .wrapper.dark-mode {
+    background: linear-gradient(180deg, #071a4e, 20%, #020b2b, 80%, #020b2b);
+    animation: moveDown 2s forwards;
+  }
+  
+  .wrapper.dark-mode h1, .wrapper.dark-mode h2 {
+    color: #e0e0e0;
+  }
+  
+  .wrapper.dark-mode nav a {
+    color: #e0e0e0;
+  }
+  
+  .wrapper.dark-mode nav a:hover {
+    color: #1a1a1a;
+  }
+  
+  .wrapper.dark-mode .icons a span {
+    background: #119dff;
+  }
+  
+  .wrapper.dark-mode .dot {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  

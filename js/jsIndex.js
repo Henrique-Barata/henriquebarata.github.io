@@ -7,7 +7,7 @@ divs.forEach(div => {
     div.classList.remove('disappear', 'flyOff', 'pop', 'reappear');
 
     // Randomly pick an animation type 'disappear','flyOff'
-    const animations = ['disappear', 'flyOff'];
+    const animations = ['flyOff'];
     const chosenAnimation = animations[Math.floor(Math.random() * animations.length)];
 
     // Apply the chosen animation
@@ -28,5 +28,21 @@ divs.forEach(div => {
         }
       }, { once: true });
     }, 500); // Adjust this timer to control when the reappear starts
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('dark-mode-toggle');
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const wrapper = document.querySelector('.wrapper');
+    if (document.body.classList.contains('dark-mode')) {
+      wrapper.classList.add('dark-mode');
+      wrapper.classList.remove('light-mode');
+    } else {
+      wrapper.classList.add('light-mode');
+      wrapper.classList.remove('dark-mode');
+    }
   });
 });
