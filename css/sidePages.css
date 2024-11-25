@@ -1,23 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #070942;
-  }
+  color: #333;
+  background: linear-gradient(180deg, #04fafd 20%, #119dff 80%, #070942);
+  height: 100vh; /* Ensure it covers the viewport height */
+  background-attachment: fixed; /* Makes the background static during scroll */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-size: cover; /* Ensures it covers the full screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
-  header {
-    background-color: #070942;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-  }
   
-  nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-  }
   
   .about-container {
     max-width: 800px;
@@ -62,6 +62,5 @@ body {
   footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #070942;
     color: #fff;
   }
