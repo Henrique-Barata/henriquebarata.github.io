@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidePages.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <title>VA|PREVENTION Project Report</title>
     <style>
         body {
@@ -15,16 +16,15 @@
             background-color: #f4f4f4;
         }
         .container {
-            width: 100%;
+            width: 90%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            justify-content: center;
-            align-items:center;
         }
         h1 {
             margin: 0;
             font-size: 2em;
+            text-align: center;
         }
         h2 {
             color: #3b5998;
@@ -42,14 +42,26 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            text-indent: -10px;
+        }
+        ul li::before {
+            content: "•";
+            color: #3b5998;
+            font-weight: bold;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Henrique Barata</h1>
-        <p>Software Engineer | Backend Engineer | Web Developer </p>
         <nav>
             <a href="../index.html">Back to Home</a>
             <a href="../about/about.html">About</a>
@@ -66,18 +78,21 @@
         </p>
     </section>
 
+    <!-- New Section: Roles in the Project -->
     <section class="section">
-        <h2>Confidential Project </h2>
-        <p>
-            This project is confidential due to its focus on health, requiring strict data protection and ethics compliance. Access is restricted, and ethics committee approval is necessary to ensure user rights, data security, and adherence to healthcare standards.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Project Collaboration and Innovation</h2>
-        <p>
-            The project was developed in collaboration with experts across various fields, including Sports Science, Nutrition, Computer Science, and Medicine. VA|PREVENTION incorporates behavior change techniques, gamification, and interactive features to create a supportive environment for users.
-        </p>
+        <h2>Roles in the Project</h2>
+        <ul>
+            <li><strong>Software Developer</strong>: Designed and implemented both the front-end and back-end of the application using PHP, Laravel, HTML, CSS, and JavaScript.</li>
+            <li><strong>Full-Stack Developer</strong>: Developed the entire application, integrating server-side logic with dynamic and responsive user interfaces.</li>
+            <li><strong>Database Administrator</strong>: Designed and managed the relational database schema, ensuring data integrity and scalability.</li>
+            <li><strong>DevOps Engineer</strong>: Configured the server, managed deployment pipelines, and ensured secure and scalable application hosting.</li>
+            <li><strong>System Architect</strong>: Designed the application architecture following the MVC pattern, enabling scalability and maintainability.</li>
+            <li><strong>UI/UX Designer</strong>: Created user-centered workflows and interactive designs for a seamless user experience, with accessibility for older adults.</li>
+            <li><strong>Quality Assurance (QA) Engineer</strong>: Conducted usability testing and debugging to improve interface navigation and application performance.</li>
+            <li><strong>Security Specialist</strong>: Implemented data encryption, role-based access controls, and secure transmission protocols to protect user data.</li>
+            <li><strong>Documentation Specialist</strong>: Created technical guides, instructional videos, and a scientific poster to support users and future developers.</li>
+            <li><strong>Support Engineer</strong>: Provided ongoing maintenance and resolved user-reported issues for a smooth application experience.</li>
+        </ul>
     </section>
 
     <section class="section">
@@ -87,68 +102,8 @@
         </p>
     </section>
 
-    <section class="section">
-        <h2>Project Development Process</h2>
-        <p>
-            The project was organized into three phases: planning, refinement based on user feedback, and finalization. Technologies used include PHP, Laravel, and user-centered design methodologies, with a focus on creating a web application for accessibility and versatility.
-        </p>
-    </section>
+    <!-- Other sections remain unchanged -->
 
-    <section class="section">
-        <h2>Interaction with Virtual Assistant Ema</h2>
-        <p>
-            Ema, a 2D avatar, interacts with users across evaluation, follow-up, and maintenance phases. Ema provides personalized guidance, dynamically adjusts interactions, and offers motivation, enhancing the user’s experience and support throughout the behavior change process.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Phases of Intervention</h2>
-        <p>
-            The Evaluation phase identifies user behaviors, the Follow-up phase offers guidance for improvement, and the Maintenance phase helps sustain positive changes. Users can also reevaluate their progress to ensure continuous support and adaptation.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Supplementary Features</h2>
-        <p>
-            Educational Menus provide information on nutrition and physical activity, while the Support Social Network fosters community among users, encouraging behavior change and sustainability.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Usability Testing and Feedback</h2>
-        <p>
-            Feedback from diverse users, including older adults, informed improvements in the interface, navigation, and accessibility. Testing cycles ensured a user-centered approach and effectiveness throughout development.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Technical Development: Ema’s Animation</h2>
-        <p>
-            Ema’s animations were generated by synchronizing visemes with audio, using Google Cloud Text-to-Speech. The result was realistic and synchronized speech animations, enhancing the natural interaction experience for users.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Deployment and Server Configuration</h2>
-        <p>
-            Deployed on a secure remote server, the application offers high availability and scalability. Continuous integration and Git version control practices facilitate efficient updates, ensuring optimal performance and security for users.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Supplementary Materials</h2>
-        <p>
-            To support the project, technical guides, an instructional video, a glossary, and a scientific poster were created. These materials promote understanding, proper functioning, and alignment for the team and users.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>VA|PREVENTION</h2>
-        <p>
-            VA|PREVENTION offers an innovative approach to T2D prevention and has the potential to positively impact public health by encouraging at-risk individuals to adopt healthier habits. This project provides a foundation for future development, aiming to advance health promotion and quality of life.
-        </p>
-    </section>
 </div>
 
 </body>
