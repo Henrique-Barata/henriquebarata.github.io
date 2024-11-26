@@ -8,6 +8,89 @@
 </head>
 <style>
 
+  /* Read More Button */
+  .read-more-btn {
+  display: inline-block;
+  text-decoration: none;
+  height: 30px;
+  color: #fff;
+  background-color: #3b5998;
+  padding: 7px 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* Button hover animation */
+.read-more-btn:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Hover effect with expanding overlay */
+.read-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.read-more-btn:hover::before {
+  transform: scale(4);
+}
+
+.read-more-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-image {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust the margin as needed */
+    
+}
+
+.profile-image img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.degree-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .degree-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+
 </style>
 
 <body>
@@ -19,44 +102,105 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-  <div class="about-container">
+  <div class="container">
     <section class="profile">
-      <img src="../images/profile.jpeg" alt="Profile Photo">
-      <h1>Henrique Barata</h1>
-      <h2>Software Engineer</h2>
+      <div class="profile-content">
+        <div class="profile-image">
+          <img src="../images/profile.jpeg" alt="Profile Photo">
+        </div>
+        <div class="profile-text">
+          <h1>Henrique Barata</h1>
+          <h1>Software Engineer</h1>
+        </div>
+      </div>
     </section>
     <section class="description">
-      <h3>About Me</h3>
+      <h2>About Me</h2>
       <p>I am a dedicated Software Engineer with problem-solving abilities, known for creating efficient solutions and thinking outside the box to overcome challenges. My resourcefulness allows me to repurpose tools and strategies to meet objectives in innovative ways. I’m a fast learner with a strong background in Java, Python, PHP, and project management.</p>
     </section>
     <section class="experience">
-      <h3>Experience</h3>
-      <p>Placeholder for details about your professional experience.</p>
+      <h2>Experience</h2>
+      <h3>VA|PREVENTION - Full Time</h3>
+      <p><strong>Sept 2023 - Nov de 2024 · 1 year 3 months</strong></p>
+      <p> I served as the project software engineer where I took on the responsibility of developing the entire application from the ground up. I conceived and developed a comprehensive web application with a scientific foundation aimed at preventing type 2 diabetes through the use of a virtual assistant. Additionally, I configured the online web server and database, managing environment settings to ensure secure and efficient application interactions.
+        In this project, I worked with a team of 16 researchers from five higher education institutions, gaining experience in a dynamic, team-based setting. This helped me improve my skills in coordination, communication, and adapting to changing project requirements, while contributing to the successful completion of key research goals.</p>
+        <a href="../assets/Recommendation Letter for Henrique Barata_signed.pdf" target="_blank">
+          <p>Recommendation Letter </p>  
+        </a>
+        <a href="../projects/vaprevention.html" class="read-more-btn">Read More</a>
     </section>
     <section class="skills">
-      <h3>Key Skills</h3>
-      <ul>
-        <li>Java</li>
-        <li>Python</li>
-        <li>PHP</li>
-        <li>Project Management</li>
-      </ul>
+      <h2>Skills</h2>
+      <div class="row" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 5px;">Soft Skills</h3>
+        <p>Problem Solving | Creativity Skills | Fast learner | Teamwork | Ideas Development | Strategic Thinking | </p>
+      </div>
+      <div class="row" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 5px;">Programming Languages</h3>
+        <p>Python | Java | PHP C | C++ | JavaScript | Kotlin | HTML | CSS | SQL </p>
+      </div>
+      <div class="row" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 5px;">Software Development</h3>
+        <p>Object-Oriented Programming (OOP) | Security Software Development | Git | Server-Side Development | Software Design | PL/SQL | Apache Server</p>
+      </div>
+      <div class="row" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 5px;">Data & Integration</h3>
+        <p>JSON | Cloud Computing</p>
+      </div>
+      <div class="row" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 5px;">Business & Management</h3>
+        <p>Project Management | Financial Markets | Entrepreneurship | Trading</p>
+      </div>
+
     </section>
     <section class="academic">
-      <h3>Academic Background</h3>
-      <p>Placeholder for details about your academic background.</p>
+      <h2>Academic Background</h2>
+    
+      <!-- Master's Degree -->
+      <div class="degree-container">
+        <img src="../images/fcul.png" alt="Faculdade de Ciências da Universidade de Lisboa Logo" class="degree-logo">
+        <div class="degree-details">
+          <h3>Master’s Degree in Software Engineering</h3>
+          <p><strong>Faculdade de Ciências da Universidade de Lisboa</strong></p>
+          <p>September 2022 - October 2024</p>
+        </div>
+      </div>
+    
+      <!-- Bachelor's Degree -->
+      <div class="degree-container">
+        <img src="../images/fcul.png" alt="Faculdade de Ciências da Universidade de Lisboa Logo" class="degree-logo ">
+        <div class="degree-details">
+          <h3>Bachelor’s Degree in Software Engineering</h3>
+          <p><strong>Faculdade de Ciências da Universidade de Lisboa</strong></p>
+          <p>September 2019 - June 2023</p>
+        </div>
+      </div>
     </section>
+
+
+<!-- 
     <section class="interests">
-      <h3>Interests</h3>
+      <h2>Interests</h2>
       <p>Placeholder for details about your interests.</p>
     </section>
-    <section class="contact" id="contact">
-      <h3>Contact</h3>
-      <p>Placeholder for contact information.</p>
-    </section>
+-->
+<section class="languges">
+  <h2>Languages</h2>
+  <p><strong>Português</strong>: First language</p>
+  <p><strong>English</strong>: C1 (Advanced)</p>
+</section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:henrique.fc.barata@gmail.com">henrique.fc.barata@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/henrique-barata-9b2a9926b/" target="_blank">https://www.linkedin.com/in/henrique-barata-9b2a9926b</a></p>
+      <p>GitHub: <a href="https://github.com/Henrique-Barata" target="_blank">https://github.com/Henrique-Barata</a></p>
+  </section>
     <section class="recommendations">
-      <h3>Recommendations</h3>
-      <p>Placeholder for recommendations from other people.</p>
+      <h2>Recommendations</h2>
+      <a href="../assets/Recommendation Letter for Henrique Barata_signed.pdf" target="_blank">
+        <p>Recommendation Letter </p>  
+      </a>
     </section>
   </div>
   <footer>

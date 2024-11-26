@@ -6,7 +6,163 @@
     <title>Roman Theatre of Lisbon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/stylesIndex.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/sidePages.css">
 </head>
+<style>
+    
+/* Main Container */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Project Intro Section */
+.project-intro {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #3b5998;
+}
+
+.project-intro p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+.project-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-section h2 {
+    font-size: 2em;
+    color: #3b5998;
+    margin-bottom: 10px;
+}
+
+.project-section p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.project-section ol,
+.project-section ul {
+    margin-left: 20px;
+    font-size: 1.1em;
+    list-style-type: disc;
+}
+
+.project-section ul {
+    list-style-type: square;
+}
+
+.project-section li {
+    margin-bottom: 8px;
+}
+
+/* Specific Section Styling */
+.project-section h3 {
+    font-size: 1em;
+    margin-top: 20px;
+    color: #3b5998;
+}
+
+/* Add Section Heading Styling */
+.project-section h2, .project-section h3 {
+    border-bottom: 2px solid #3b5998;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.section-image {
+    float: right;
+    margin-left: 20px;
+    width: 40%;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-thumbnail {
+            float: right;
+            margin-left: 20px;
+            width: 40%;
+            cursor: pointer;
+        }
+
+        .video-thumbnail video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: 0 auto;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    header nav a {
+        margin: 0 8px;
+        font-size: 1em;
+    }
+
+    .section-image {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+</style>
 <body>
 
 <header class="gallery-header">
@@ -20,33 +176,138 @@
 
 <main class="project-details-container">
     <section class="project-intro">
+        <div class="video-thumbnail" onclick="openModal()">
+            <video src="../assets/roman.webm" type="video/webm" autoplay muted></video>
+        </div>
         <h1>Roman Theatre of Lisbon</h1>
-        <p>Introduction</p>
         <p>The objective of this project was to virtually recreate a historical monument – the Roman Theatre of Lisbon – and to provide a one-minute virtual tour of the site through animation. The project was carried out using Blender, where the theatre and its foundation were manually modeled with some imported models from StackBlitz and Mixano to enhance the immersive and realistic environment. This report explains the various steps involved in the implementation of this project.</p>
+
     </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <video id="modalVideo" width="100%" controls>
+                    <source src="../assets/roman.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
 
     <section class="project-section">
         <h2>Modeling</h2>
-        <p>To achieve a more realistic model and immersive environment, the theatre was modeled based on reference images and blueprints provided for the project (Figures on the cover of this report). We also decorated the model with figures imported that reflected the Roman era depicted in the design.</p>
+        <p>To achieve a more realistic model and immersive environment, the theatre was modeled based on reference images and blueprints. The model was decorated with figures imported that reflected the Roman era depicted in the design.</p>
     </section>
 
     <section class="project-section">
+        <div class="section-image">
+            <img src="../images/roman1.png" alt="Division of Parts">
+        </div>
         <h2>Foundation</h2>
-        <p>We started by aligning the lateral blueprint image with Blender's axes and defining the scale for the workspace. A plane was then created and subdivided, allowing easy modifications for the initial foundation where the Theatre would stand.</p>
+
+        <p>Starting by aligning the lateral blueprint image with Blender's axes and defining the scale for the workspace. A plane was then created and subdivided, allowing easy modifications for the initial foundation where the Theatre would stand.</p>
+
     </section>
 
     <section class="project-section">
         <h2>Roman Theatre: Division by Parts</h2>
         <p>The modeling process was divided into three main parts:</p>
         <ol>
-            <li>The Lower Part (1): Comprising the stairs, courtyard, roof with columns and railing. This section also includes the Porticus Post Scaenam.</li>
-            <li>The Upper Part (2): The main "coliseum" area, which would hold the audience, orchestra, stage, and its entrances.</li>
-            <li>The Exterior (3): Consisting of the courtyard, access stairs to the Theatre, and the Decumanus (streets).</li>
+            <li><strong>The Lower Part (1)</strong>: Comprising the stairs, courtyard, roof with columns and railing. This section also includes the Porticus Post Scaenam.</li>
+            <li><strong>The Upper Part (2)</strong>: The main "coliseum" area, which would hold the audience, orchestra, stage, and its entrances.</li>
+            <li><strong>The Exterior (3)</strong>: Consisting of the courtyard, access stairs to the Theatre, and the Decumanus (streets).</li>
         </ol>
+
     </section>
 
-    <!-- Add more sections following the same structure -->
+    <section class="project-section">
+        <h3>Part 1 – Lower Area</h3>
+        <p>In this part, various planes were used, mostly deformed using Blender’s ‘Bevel’ and ‘Extrude’ functions. Important components included:</p>
+        <div class="section-image">
+            <img src="../images/roman2.png" alt="Division of Parts">
+        </div>
+        <ul>
+            <li><strong>Arches</strong>: Each entrance arch was made by segmenting a parallelepiped with ‘Bevel’ and removing the interior to create the arch structure, which was then inserted into a solid wall.</li>
+            <li><strong>Roofs</strong>: The roofs supported by the columns were created using planes, with the ‘Extrude’ and ‘Knife Tool’ functions to form the desired triangular shape and L-section for the roof.</li>
+            <li><strong>Stairs</strong>: A plane was duplicated several times, aligned, and solidified using the *Solidify Modifier* to give consistency to the steps. The various planes were joined to form the full staircase.</li>
+            <li><strong>Railing</strong>: The railings connecting the columns were created using the *Wireframe Modifier*, with patterns drawn on a plane using the ‘Bevel’ tool.</li>
+            <li><strong>Columns</strong>: Imported from Sketchfab.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h3>Part 2 – Upper Area</h3>
+        <ul>
+            <li><strong>Stage and Roof</strong>: Various planes were used to form the stage and its roof, including imported columns as part of the design.</li>
+            <li><strong>Tunnels</strong>: Planes were expanded and shaped with the 'Bevel' tool to create doorways with rounded frames.</li>
+            <li><strong>Seating Area</strong>: A circular plane was used and modified with ‘Extrude’ and ‘Scale’ to form the seats.</li>
+            <li><strong>Walls and Roofs</strong>: The walls surrounding the seating area were built using planes, with modifiers like *Array* and *Curve* applied for symmetry, making the structure as round as possible for a realistic effect.</li>
+            <li><strong>Details in the Seating Area</strong>: New planes were added for various details such as entrances and dividers, adjusted to fit the seating area.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h3>Part 3 – Exterior Area</h3>
+        <ul>
+            <li><strong>Stairs</strong>: Adapted from the stairs used in Part 1, scaled to fit the desired dimensions based on reference images.</li>
+            <li><strong>Courtyard</strong>: Made with a plane and decorated with a Roman statue and fountain, both imported from Sketchfab.</li>
+            <li><strong>Terrain</strong>: A plane was subdivided, and sculpting tools were used to give it the desired shape while integrating the foundation.</li>
+            <li><strong>Additional Figures</strong>: Characters and instruments were imported from Mixano and Sketchfab to enhance the authenticity of the scene.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <div class="section-image">
+            <img src="../images/roman.png" alt="Division of Parts">
+        </div>
+        <h2>Texture Application</h2>
+
+        <p>To streamline the texturing process, the 'Lily Surface Scrapper' add-on was used, which allows textures from four sites (AmbienteCG, cgbookcase.com, Poly Heaven Texture, and 3DAssets.one) to be applied more efficiently. The materials chosen were selected to best reflect the examples used as references.</p>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Animations</h2>
+        <p>For the animations, was used the keyframing method, creating poses for each model and assigning keyframes. The models were imported from Mixano and connected to skeletons with automatic weights, so they moved with the animations. However, during the transition to the computer rendering the animation, the animation cycle for the skeletons was lost, meaning only one character had the animation during the video, while the others were animated for the first 40 frames.</p>
+        <div class="section-image">
+            <img src="../images/roman4.png" alt="Division of Parts">
+        </div>
+        <ul>
+            <li><strong>Man Sitting in the Audience</strong>: The man was posed in a relaxed position with his legs crossed. His animation consisted of reacting to the orchestra by clapping.</li>
+            <li><strong>Playing the Harp</strong>: One hand of the model was placed holding the harp at head height, while the other hand moved across it, with the model's head and leg moving rhythmically for added dynamism.</li>
+            <li><strong>Playing the Drum</strong>: The complexity of the drum animation involved both drumsticks moving with the model. Keyframes were assigned to the drumsticks to ensure they followed the movement. The drum was placed between the model's legs, with the model tapping his foot to the rhythm.</li>
+        </ul>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Virtual Tour</h2>
+        <h3>Camera 1 - First-Person View</h3>
+        <p>For the animation recording, a camera was used with the 'Walk Navigation' tool to create a more realistic walking effect. Due to the computer's performance limitations, the animation was recorded with a low frame rate of 18 FPS, which caused some jerky movements in the video. A focal length of 17mm was used as it best fit the scene. Keyframes were created whenever there was movement. To achieve smoother animation, sample keyframes were added to fill the gaps, and the 'Smooth Keys' tool was used to avoid camera shakes.</p>
+    </section>
+
+    <section class="project-section">
+        <h2>Rendering</h2>
+        <p>For rendering the video, 18 frames per second were used to maintain a similar speed to the desired animation.</p>
+    </section>
+    <footer>
+        <p>&copy; Henrique Barata</p>
+      </footer>
 </main>
+
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("modalVideo").play();
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("modalVideo").pause();
+        document.getElementById("modalVideo").currentTime = 0;
+    }
+</script>
 
 </body>
 </html>

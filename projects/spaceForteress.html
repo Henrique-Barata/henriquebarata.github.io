@@ -3,106 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Space Fortress - Game Overview</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1e1e2f;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
+    <title>Space Fortress</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/stylesIndex.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/sidePages.css">
+</head>
+<style>
+    
+/* Main Container */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Project Intro Section */
+.project-intro {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #3b5998;
+}
+
+.project-intro p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+.project-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-section h2 {
+    font-size: 2em;
+    color: #3b5998;
+    margin-bottom: 10px;
+}
+
+.project-section p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.project-section ol,
+.project-section ul {
+    margin-left: 20px;
+    font-size: 1.1em;
+    list-style-type: disc;
+}
+
+.project-section ul {
+    list-style-type: square;
+}
+
+.project-section li {
+    margin-bottom: 8px;
+}
+
+/* Specific Section Styling */
+.project-section h3 {
+    font-size: 1em;
+    margin-top: 20px;
+    color: #3b5998;
+}
+
+/* Add Section Heading Styling */
+.project-section h2, .project-section h3 {
+    border-bottom: 2px solid #3b5998;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.section-image {
+    float: right;
+    margin-left: 20px;
+    width: 40%;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-thumbnail {
+            float: right;
+            margin-left: 20px;
+            width: 40%;
+            cursor: pointer;
         }
-        .container {
-            max-width: 800px;
+
+        .video-thumbnail video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
             margin: 0 auto;
             padding: 20px;
+            width: 80%;
         }
-        h1, h2 {
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .image-gallery .gallery-item {
+            flex: 1 1 calc(33.333% - 10px);
+            margin-inline: 5px;
+            margin-bottom: 5px;
             text-align: center;
-            color: #00c6ff;
         }
-        p {
-            line-height: 1.6;
-        }
-        .feature-list {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        .image-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image-section img {
-            max-width: 100%;
+
+        .image-gallery .gallery-item img {
+            width: 100%;
             height: auto;
-            border: 2px solid #00c6ff;
             border-radius: 8px;
-            margin-bottom: 10px;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #cccccc;
+
+        .image-gallery .gallery-item p {
+            margin-top: 10px;
+            font-size: 1em;
         }
-    </style>
-</head>
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    header nav a {
+        margin: 0 8px;
+        font-size: 1em;
+    }
+
+    .section-image {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+</style>
 <body>
 
-    <header>
-        <h1>Henrique Barata</h1>
-        <p>Software Engineer | Backend Engineer | Web Developer </p>
-        <nav>
-            <a href="../index.html">Back to Home</a>
-            <a href="../about/about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="../index.html#contact">Contact</a>
-        </nav>
-    </header>
+<header class="gallery-header">
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about/about.html">About Me</a>
+        <a href="projects.html">Portfolio</a>
+        <a href="../contact/contact.html">Contact</a>
+    </nav>
+</header>
 
-
-    <div class="container">
+<main class="project-details-container">
+    <section class="project-intro">
+        <div class="section-image">
+            <img src="../images/space.png" alt="Division of Parts">
+        </div>
         <h1>Space Fortress</h1>
-        
-        <div class="image-section">
-            <img src="../images/image.jpg" alt="Space Fortress Title Screen">
-            <p>Title screen showcasing the Space Fortress logo and game theme.</p>
-        </div>
-        
-        <h2>Game Overview</h2>
-        <p><strong>Space Fortress</strong> is an exciting 3D rogue-like strategy game developed in Unity, where players must defend a ship’s reactor from relentless enemy invasions. Every wave of enemies increases in difficulty, pushing players to make quick decisions and adapt their defenses strategically. As the developer, I created the entire game map and programmed the gameplay mechanics to provide a challenging and immersive experience.</p>
+        <p>Is an exciting 3D rogue-like strategy game developed in Unity, where players must defend a ship’s reactor from relentless enemy invasions. Every wave of enemies increases in difficulty, pushing players to make quick decisions and adapt their defenses strategically. As the developer, I created the game map and programmed the gameplay mechanics to provide a challenging and immersive experience.</p>
 
-        <div class="image-section">
-            <img src="../images/image.jpg" alt="Gameplay Screenshot">
-            <p>Screenshot of gameplay showing defenses and incoming enemy waves.</p>
-        </div>
+    </section>
 
+
+    <section class="project-section">
         <h2>Gameplay Overview</h2>
         <p>In <strong>Space Fortress</strong>, players must collect in-game currency as they defend the ship, which they can then spend on valuable upgrades and reinforcements. This currency allows players to buy new turrets, traps, and powerful weapons to help fend off the growing waves of invaders. Each round brings new types of enemies, requiring players to strategize effectively and use their resources wisely.</p>
+        
+    </section>
 
-        <div class="image-section">
-            <img src="../images/image.jpg" alt="Upgrade Menu">
-            <p>Upgrade menu where players can purchase turrets, traps, and weapons.</p>
+    <section class="project-section">
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="../images/space3.png" alt="Image 1">
+                <p>Upgrade menu where players can purchase turrets, traps and walls</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/space4.png" alt="Image 2">
+                <p>Upgrade menu where players can purchase weapons</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/space5.png" alt="Image 3">
+                <p>Space Fortress Map</p>
+            </div>
         </div>
+    </section>
 
+    <section class="project-section">
         <h2>Key Features</h2>
-        <ul class="feature-list">
+        <div class="section-image">
+            <img src="../images/space2.png" alt="Enemies in Action">
+        </div>
+        <ul>
             <li><strong>Strategic Resource Management:</strong> Players balance their earnings to upgrade firepower, add new defenses, and place traps around critical reactor areas.</li>
             <li><strong>Rogue-like Elements:</strong> Each playthrough is unique, with random wave patterns and enemy types that challenge players to adapt their strategies.</li>
             <li><strong>Upgrade System:</strong> Unlock advanced weapons, turrets, and defenses as the game progresses, helping players hold off increasingly tough enemies.</li>
         </ul>
 
-        <div class="image-section">
-            <img src="../images/image.jpg" alt="Enemies in Action">
-            <p>Enemies approaching the reactor, adding urgency to defense strategies.</p>
-        </div>
 
-        <p><strong>Space Fortress</strong> combines the high-stakes action of a rogue-like game with the deep, tactical planning of a strategy game. Each wave is a test of skill, making every decision crucial for survival as players defend the reactor against the oncoming onslaught. Prepare to think quickly, act strategically, and test your defensive skills in Space Fortress!</p>
-    </div>
+        <p><strong>Space Fortress</strong> Combines the high-stakes action of a rogue-like game with the deep, tactical planning of a strategy game. Each wave is a test of skill, making every decision crucial for survival as players defend the reactor against the oncoming onslaught. Prepare to think quickly, act strategically, and test your defensive skills in Space Fortress!</p>
+    </section>
 
-    <div class="footer">
-        &copy; 2024 Space Fortress. Developed by [Your Name].
-    </div>
+    <section class="project-section">
+        <h2>Download and Play</h2>
+        <p>Double-click Space Forteress.exe to run the game. <a href="https://github.com/Henrique-Barata/Space-Forteress-Game-Develop" class="icon-link" target="_blank"><i class="fab fa-github"></i></a>
+        </p>
+         </section>
+
+  
+
+         <footer>
+            <p>&copy; Henrique Barata</p>
+          </footer>
+
+</main>
+
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("modalVideo").play();
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("modalVideo").pause();
+        document.getElementById("modalVideo").currentTime = 0;
+    }
+</script>
+
 </body>
 </html>
